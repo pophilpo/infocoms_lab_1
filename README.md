@@ -96,8 +96,8 @@ link/ether 30:9c:23:3f:27:f7 brd ff:ff:ff:ff:ff:ff`<br /><br />
 `adduser test_user` - Создание пользователя <br />
 `usermod -aG sudo test_user` - Добавление пользователя в группу с правами администратора <br />
 Разрешим новому пользователю подключаться к устройству по SSH изменив файл <br />
-`/etc/ssh/sshd_config`
+`/etc/ssh/sshd_config` <br />
 В данный файл добавим строчку <br />
-`AllowUsers test_user root`
+`AllowUsers test_user root` <br />
 Для того чтобы изменения вступили в силу - перезапустим сервис `sshd`: <br />
 `systemctl restart sshd`
